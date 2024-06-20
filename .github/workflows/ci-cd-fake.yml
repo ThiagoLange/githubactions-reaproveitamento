@@ -14,3 +14,5 @@ jobs:
     CD:
       needs: [CI]
       uses: ThiagoLange/githubactions-reaproveitamento/.github/workflows/cd.yml@main
+      with:
+        ambiente: producao
